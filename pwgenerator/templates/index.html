@@ -1,18 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
-</head>
-<<body class="bg-slate-900">
-    <section class="container mx-2 md:mx-auto md:my-24 py-8 border">
-        <div class="flex flex-col items-center">
-            <h1 class="text-2xl font-bold tracking-tighter text-gray-300 mb-6">Password Generator</h1>
-            <!-- Password field for copy -->
-            <!-- Control -->
+  </head>
+  <body class="bg-slate-900">
+    <!-- Password Generator  -->
+    <section class="container mx-2 border py-8 md:mx-auto md:my-24">
+      <div class="flex flex-col items-center">
+        <!-- Password Generator title -->
+        <h1 class="mb-6 text-2xl font-bold tracking-tighter text-gray-300">Password Generator</h1>
+
+        <!-- Password Generator Copy Field -->
+        <div class="flex w-full max-w-sm flex-col gap-1 text-slate-700">
+          <label for="passwordOutput" class="w-fit pl-0.5 text-sm text-gray-300">Copy your password:</label>
+          <input id="passwordOutput" type="text" class="focus-visible:none w-full rounded-md px-4 py-4 text-sm" name="passwordOutput" />
         </div>
+
+        <!-- Password Generator Control Panel -->
+        <div class="mt-8 w-full max-w-sm border p-6">
+          <div class="flex flex-row items-center justify-between px-2">
+            <h3 class="text-white">Character length</h3>
+            <p id="characterLenOutput" class="text-lg tracking-wider text-white">10</p>
+          </div>
+
+          <!-- Password Generator Slider -->
+          <div class="mt-8 flex w-full flex-col gap-2 px-2 text-white">
+            <label for="passwordLengthInput" class="w-fit text-sm">Password Length:</label>
+            <input id="passwordLengthInput" type="range" class="h-2 w-full appearance-none rounded-full bg-slate-100 focus:outline-blue-700 [&::-moz-range-thumb]:size-4 [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:bg-blue-700 active:[&::-moz-range-thumb]:scale-110 [&::-webkit-slider-thumb]:size-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-none [&::-webkit-slider-thumb]:bg-blue-700 active:[&::-webkit-slider-thumb]:scale-110" value="20" min="0" max="100" step="1" />
+          </div>
+
+          <div class="mt-8 flex items-center">
+            <input id="uppercaseCheckbox" type="checkbox" class="mr-2 h-5 w-5 cursor-pointer rounded border-gray-300 bg-white transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none" />
+            <label for="uppercaseCheckbox" class="cursor-pointer text-white">Include uppercase</label>
+          </div>
+
+          <div class="mt-8 flex items-center">
+            <input id="lowercaseCheckbox" type="checkbox" class="mr-2 h-5 w-5 cursor-pointer rounded border-gray-300 bg-white transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none" />
+            <label for="lowercaseCheckbox" class="cursor-pointer text-white">Include lowercase</label>
+          </div>
+
+          <div class="mt-8 flex items-center">
+            <input id="numbersCheckbox" type="checkbox" class="mr-2 h-5 w-5 cursor-pointer rounded border-gray-300 bg-white transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none" />
+            <label for="numbersCheckbox" class="cursor-pointer text-white">Include numbers</label>
+          </div>
+
+          <div class="mt-8 flex items-center">
+            <input id="specialCharCheckbox" type="checkbox" class="mr-2 h-5 w-5 cursor-pointer rounded border-gray-300 bg-white transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none" />
+            <label for="specialCharCheckbox" class="cursor-pointer text-white">Include special characters</label>
+          </div>
+
+          <div class="mt-8 flex h-4 w-full overflow-hidden rounded-xl bg-slate-100" role="progressbar">
+            <div class="h-full rounded-xl bg-blue-700 p-0.5 text-center text-xs font-semibold leading-none text-slate-100 dark:bg-blue-600 dark:text-slate-100" :style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`">
+              <span id="passwordstrengthOutput">0%</span>
+            </div>
+          </div>
+
+          <button class="mt-8 w-full border px-4 py-2 text-white">Generate</button>
+        </div>
+      </div>
     </section>
-</body>
+  </body>
 </html>
