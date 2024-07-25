@@ -1,0 +1,11 @@
+from flask import Blueprint, jsonify, render_template
+
+pwgenerator = Blueprint(
+    'pwgenerator', 
+    __name__,
+    template_folder='templates',  
+    static_folder='static'  
+)
+@pwgenerator.route('/')
+def home() -> str:
+    return render_template("index.html")
