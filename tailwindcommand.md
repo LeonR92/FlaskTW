@@ -1,0 +1,1 @@
+npx tailwindcss -i ./pwgenerator/static/tailwind.css -o ./pwgenerator/static/tailwind.min.css --minify
