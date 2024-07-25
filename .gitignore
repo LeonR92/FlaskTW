@@ -1,0 +1,45 @@
+# Python cache and environment files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node.js modules
+node_modules/
+
+# Virtualenv
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# MacOS files
+.DS_Store
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# Compiled files
+*.so
+
+# MySQL
+*.pid
+*.seed
+*.sock
+
+# Other
+*.sublime-workspace
+*.sublime-project
