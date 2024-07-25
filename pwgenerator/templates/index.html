@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/pwgenerator/static/passwordgenerator.js" defer></script>
     <title>Document</title>
   </head>
   <body class="bg-slate-900">
@@ -23,13 +24,13 @@
         <div class="mt-8 w-full max-w-sm border p-6">
           <div class="flex flex-row items-center justify-between px-2">
             <h3 class="text-white">Character length</h3>
-            <p id="characterLenOutput" class="text-lg tracking-wider text-white">10</p>
+            <p id="characterLenOutput" class="text-lg tracking-wider text-white">0</p>
           </div>
 
           <!-- Password Generator Slider -->
           <div class="mt-8 flex w-full flex-col gap-2 px-2 text-white">
             <label for="passwordLengthInput" class="w-fit text-sm">Password Length:</label>
-            <input id="passwordLengthInput" type="range" class="h-2 w-full appearance-none rounded-full bg-slate-100 focus:outline-blue-700 [&::-moz-range-thumb]:size-4 [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:bg-blue-700 active:[&::-moz-range-thumb]:scale-110 [&::-webkit-slider-thumb]:size-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-none [&::-webkit-slider-thumb]:bg-blue-700 active:[&::-webkit-slider-thumb]:scale-110" value="20" min="0" max="100" step="1" />
+            <input id="passwordLengthInput" type="range" class="h-2 w-full appearance-none rounded-full bg-slate-100 focus:outline-blue-700 [&::-moz-range-thumb]:size-4 [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:bg-blue-700 active:[&::-moz-range-thumb]:scale-110 [&::-webkit-slider-thumb]:size-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-none [&::-webkit-slider-thumb]:bg-blue-700 active:[&::-webkit-slider-thumb]:scale-110" value="0" min="0" max="10" step="1" />
           </div>
 
           <div class="mt-8 flex items-center">
